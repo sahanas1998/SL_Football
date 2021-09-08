@@ -1,0 +1,24 @@
+.btn {
+  text-transform: none;
+  color: #ffffff;
+  border-style: none;
+  font-weight: 600;
+  border-color: #ffff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.btn:hover {
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: none;
+  border-style: none;
+  border-color: #ffff;
+}
+.active {
+  color: #ffffff;
+  font-weight: 700;
+  border-style: none;
+  border-bottom: 3px solid #ffffff;
+  transition: border-bottom 0.5s ease-in-out;
+}
