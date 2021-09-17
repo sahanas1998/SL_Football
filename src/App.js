@@ -9,6 +9,7 @@ import Home from "./view/home";
 import About from "./view/about";
 import Login from "./view/login";
 import Appbar from "./Appbar/Appbar";
+import Modal from "./compoents/About/modal";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -37,7 +38,7 @@ export default function BasicExample() {
           </li>
         </ul> */}
 
-        <hr />
+        {/* <hr /> */}
 
         {/*
           A <Switch> looks through all its children <Route>
@@ -55,6 +56,9 @@ export default function BasicExample() {
           </Route>
           <Route exact path="/login">
             <Login />
+          </Route>
+          <Route exact path="/about/modal">
+            <Modal />
           </Route>
         </Switch>
       </div>

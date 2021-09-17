@@ -14,14 +14,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import FormLabel from '@material-ui/core/FormLabel';
-import Match from "../data/match";
-import Cards from "../compoents/card";
+import Match from '../data/match';
+import Cards1 from '../compoents/card_flag';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
+    <Typography variant='body2' color='textSecondary' align='center'>
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color='inherit' href='https://material-ui.com/'>
         Your Website
       </Link>{' '}
       {new Date().getFullYear()}
@@ -81,20 +81,35 @@ export default function Album() {
       <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
-          <Container maxWidth="sm">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Sri_Lanka.svg/800px-Flag_of_Sri_Lanka.svg.png" height="300px" width="600px"/>
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-            Srilankan Football Team-2021
+          <Container maxWidth='sm'>
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Sri_Lanka.svg/800px-Flag_of_Sri_Lanka.svg.png'
+              height='300px'
+              width='600px'
+            />
+            <Typography
+              component='h1'
+              variant='h2'
+              align='center'
+              color='textPrimary'
+              gutterBottom
+            >
+              Srilankan Football Team-2021
             </Typography>
             {/* <img src="https://www.freeiconspng.com/thumbs/football-png/football-png-28.png" height="200px" width="200px"/> */}
             {/* <Typography variant="h2" align="center" color="textSecondary" paragraph>
              
             </Typography> */}
             <div className={classes.heroButtons}>
-              <Grid container spacing={2} justifyContent="center">
+              <Grid container spacing={2} justifyContent='center'>
                 <Grid item>
-                  <Button variant="contained" color="primary" onClick="home.js">
-                   Players' Details
+                  <Button
+                    variant='contained'
+                    color='primary'
+                    onClick='home.js'
+                    // onClick={<Home />}
+                  >
+                    Players' Details
                   </Button>
                 </Grid>
                 {/* <Grid item>
@@ -106,20 +121,24 @@ export default function Album() {
             </div>
           </Container>
         </div>
-        <Container className={classes.cardGrid} maxWidth="md">
-        <Grid
-  container
-  direction="row"
-  justifyContent="center"
-  alignItems="center"
-  spacing={4}
->
-        {Match.map((Match)=>(<Grid item xl={3} lg={4} md={4} sm={12} xs={12}><Cards{...Match}/></Grid>))}
-        </Grid>
+        <Container className={classes.cardGrid} maxWidth='md'>
+          <Grid
+            container
+            direction='row'
+            justifyContent='center'
+            alignItems='center'
+            spacing={4}
+          >
+            {Match.map((Match) => (
+              <Grid item xl={3} lg={4} md={4} sm={12} xs={12}>
+                <Cards1 {...Match} />
+              </Grid>
+            ))}
+          </Grid>
         </Container>
       </main>
       {/* Footer */}
-      <footer className={classes.footer}>
+      {/* <footer className={classes.footer} >
         <Typography variant="h6" align="center" gutterBottom>
           Footer
         </Typography>
@@ -127,7 +146,7 @@ export default function Album() {
           Something here to give the footer a purpose!
         </Typography>
         <Copyright />
-      </footer>
+      </footer> */}
       {/* End footer */}
     </React.Fragment>
   );
